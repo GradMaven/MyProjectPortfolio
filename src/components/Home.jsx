@@ -81,7 +81,7 @@ function Home() {
         {/* Profile Image */}
         <div className="hidden md:flex w-full md:w-1/2 justify-center">
           <img
-            src="/src/images/profilepic.jpeg"
+            src="/images/profilepic.jpeg"
             alt="profile"
             className="rounded-full object-cover w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] mb-4 md:mb-0"
           />

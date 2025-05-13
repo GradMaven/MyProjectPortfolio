@@ -12,7 +12,7 @@ function About() {
       {/* Profile Image */}
       <div className="w-full max-w-xs md:max-w-sm flex justify-center">
         <img
-          src="/src/images/profilepic.jpeg"
+          src="/images/profilepic.jpeg"
           alt="profile"
           className="rounded-full object-cover w-[250px] h-[250px] sm:w-[300px] sm:h-[300px]"
         />
