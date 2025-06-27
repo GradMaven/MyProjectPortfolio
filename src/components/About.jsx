@@ -21,8 +21,8 @@ function About() {
       {/* Text Content */}
       <div className="w-full md:max-w-2xl text-center md:text-left">
         <h2 id="about" className="text-[#1E493D] text-3xl font-bold mb-4">About Me</h2>
-        <h3 className="text-[#1E493D] text-xl font-bold">Frontend Engineer</h3>
-        <p className="text-white font-semibold mb-6 mt-4 text-sm sm:text-base">
+        <h3 className="text-[#1E493D] text-2xl font-bold">Frontend Engineer</h3>
+        <p className="text-white font-semibold mb-6 mt-4 text-justify text-sm sm:text-base">
           Highly skilled Front End Developer with three years of experience in creating visually appealing 
           and user-friendly websites. Proficient in HTML, CSS, and JavaScript, with a strong understanding 
           of modern web development technologies and frameworks. Committed to delivering high-quality code 
@@ -37,32 +37,60 @@ function About() {
         </button>
 
         {showMore && (
+          <div>
           <div className="mt-6 text-left">
-            <h3 className="text-[#1E493D] text-xl font-bold mt-2">Experience</h3>
+            <h3 className="text-[#1E493D] text-2xl font-bold mt-2">Experience</h3>
 
             {/* Job 1 */}
-            <h4 className="text-[#041915] font-semibold mt-4">Fullstack Developer</h4>
+            <h4 className="text-[#C2C2C2] text-xl font-semibold mt-4">Fullstack Developer</h4>
             <h5 className="text-[#041915]">
               Business Web Solutions <span className="text-[#1E493D] font-bold">India</span>
             </h5>
-            <h5 className="text-[#041915]">April 2025 – Present</h5>
+            <h5 className="text-[#041915] indent-4">April 2025 – Present</h5>
             <p className="text-white font-semibold mt-2 text-sm sm:text-base">
               Applying various stacks and technologies to develop and implement web solutions 
               for businesses across the world.
             </p>
 
             {/* Job 2 */}
-            <h4 className="text-[#041915] font-semibold mt-4">Frontend Developer</h4>
+            <h4 className="text-[#C2C2C2] text-xl font-semibold mt-4">Frontend Developer</h4>
             <h5 className="text-[#041915]">Freelance: Upwork, Fiverr, Freelancer</h5>
-            <h5 className="text-[#041915]">February 2022 – Present</h5>
-            <p className="text-white font-semibold mt-2 text-sm sm:text-base">
+            <h5 className="text-[#041915] indent-4">February 2022 – Present</h5>
+            <p className="text-white font-semibold mt-2 text-justify text-sm sm:text-base">
               I help clients online with their business needs. I have worked with various 
               businesses, collaborating with UI/UX designers and backend developers to develop 
               high-quality and user-friendly web solutions.
             </p>
           </div>
+
+          <div>
+             <h3 className="text-[#1E493D] text-2xl font-bold mt-2 ">Tools and Software</h3>
+             <h4 className="text-white text-xl font-bold mt-2" >Software Dev:</h4>
+             <ul className='text-[#C2C2C2] font-medium indent-4'>
+                <li>Languages: JavaScript, Java, Python</li>
+                <li>Frameworks: React, NodeJS, ExpressJS</li>
+                <li>Database: MongoDB, PostegreSQL, SQLite</li>
+                <li>Tools: Firebase, Git, Postman</li>
+             </ul>
+             <h4 className="text-white text-xl font-bold mt-2" >Project Management:</h4>
+             <ul className='text-[#C2C2C2] font-medium indent-4'>
+                <li>Microsoft Project</li>
+                <li>Agile Project Management</li>
+                <li>Waterfall Project Management</li>
+                 <li>Scrum</li>
+                <li>Kanban</li>
+               
+             </ul>
+            
+          </div>
+          </div>
+          
+
         )}
+
+        
       </div>
+      
     </div>
   );
 }

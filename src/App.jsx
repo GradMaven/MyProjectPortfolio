@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Projects from './components/Projects'
 import Services from './components/Services'
 import Contact from './components/Contact'
+import Footer from './components/Footer';
 import FancyCursor from './components/Fancycursor';
 
 
@@ -19,6 +20,7 @@ function App() {
         <Services />
         <Projects />
         <Contact />
+        <Footer />
         <FancyCursor />
    
     </>

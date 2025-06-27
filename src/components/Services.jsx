@@ -9,7 +9,7 @@ function Services() {
         {/* UI/UX Design */}
         <div className="bg-[#BF8C73] text-center shadow-lg rounded-lg p-6">
           <h3 className="text-[#1E493D] text-xl font-bold mb-2">UI/UX Design</h3>
-          <p className="text-white text-sm sm:text-base">
+          <p className="text-white text-justify text-sm sm:text-base">
             I create user-centered digital experiences by combining aesthetics with functionality. I conduct research,
             design wireframes and prototypes, and ensure interfaces are intuitive, accessible, and visually appealing.
             My knowledge of user behavior and business goals helps me bridge the gap between technology and human
@@ -23,7 +23,7 @@ function Services() {
         {/* Software Development */}
         <div className="bg-[#BF8C73] text-center shadow-lg rounded-lg p-6">
           <h3 className="text-[#1E493D] text-xl font-bold mb-2">Software Development</h3>
-          <p className="text-white text-sm sm:text-base">
+          <p className="text-white text-justify text-sm sm:text-base">
             I leverage modern technologies to build responsive, user-friendly web interfaces that bring digital
             products to life. I transform design mockups into interactive experiences using HTML, CSS, JavaScript,
             and modern frameworks like React or Vue. By prioritizing performance, accessibility, and seamless user
@@ -37,7 +37,7 @@ function Services() {
         {/* Project Management */}
         <div className="bg-[#BF8C73] text-center shadow-lg rounded-lg p-6">
           <h3 className="text-[#1E493D] text-xl font-bold mb-2">Project Management</h3>
-          <p className="text-white text-sm sm:text-base">
+          <p className="text-white text-justify text-sm sm:text-base">
             As a project manager, I lead agile teams to deliver high-quality code, scalable architecture, and
             user-focused solutions on time and within scope. I bridge communication between developers, designers,
             and stakeholders, turning technical complexity into clear milestones and measurable outcomes. With deep

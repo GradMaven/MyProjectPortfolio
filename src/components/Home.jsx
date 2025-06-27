@@ -3,9 +3,9 @@ import { TypeAnimation } from 'react-type-animation';
 
 function Home() {
   return (
-    <div className="w-full min-h-screen bg-[#041915]">
+    <div className="w-full bg-[#041915]">
       
-      <div className="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
+      <div className="container mx-auto px-4 flex flex-wrap justify-between items-start md:items-center">
         <h3 className="text-[#BF8C73] font-bold text-xl">Portfolio</h3>
         <nav className="w-full md:w-auto hidden md:flex">
           <ul className="text-[#BF8C73] flex flex-col  md:flex-row mt-4 md:mt-0 gap-2 md:gap-6">
@@ -46,7 +46,7 @@ function Home() {
             style={{ fontSize: '1.5rem', color: '#BF8C73', fontWeight: 'bold' }}
           />
 
-          <p className="text-white font-semibold mt-6 sm:text-base text-sm">
+          <p className="text-white text-justify font-semibold mt-6 sm:text-base text-sm">
             As a software developer and project manager, I design, develop,
             and implement software solutions while ensuring projects are
             completed on time and within scope. I coordinate with
