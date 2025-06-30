@@ -1,14 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
+
+
 function Home() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => setIsMenuOpen(prev => !prev);
+
+  
+
   return (
     <div className="w-full bg-[#041915]">
       
       <div className="container mx-auto px-4 flex flex-wrap justify-between items-start md:items-center">
-        <h3 className="text-[#BF8C73] font-bold text-xl">Portfolio</h3>
-        <nav className="w-full md:w-auto hidden md:flex">
-          <ul className="text-[#BF8C73] flex flex-col  md:flex-row mt-4 md:mt-0 gap-2 md:gap-6">
+        <h3 className="text-[#BF8C73] font-bold text-xl mt-4">Portfolio</h3>
+
+        <button onClick = {toggleMenu} id="menu-btn" class="md:hidden text-white focus:outline-none">
+       <img 
+        src={isMenuOpen ? "/icons/open-menu.png" : "/icons/close-menu.png"}
+
+       alt="harmburger" className="w-8 h-8" />
+      </button>
+
+      
+
+         {/* Desktop Menu */}
+        <nav className="hidden md:flex md:items-center mt-4">
+          <ul className="text-[#BF8C73] flex flex-col md:flex-row mt-4 md:mt-0 gap-2 md:gap-6">
             <a href="#home" className="text-white hover:text-[#BF8C73] font-bold">Home</a>
             <a href="#about" className="text-white hover:text-[#BF8C73] font-bold">About Me</a>
             <a href="#services" className="text-white hover:text-[#BF8C73] font-bold">Services</a>
@@ -16,6 +36,22 @@ function Home() {
             <a href="#contact" className="text-white hover:text-[#BF8C73] font-bold">Contact</a>
           </ul>
         </nav>
+
+
+        {/* Mobile Slide Menu */}
+        <div
+          className={`fixed top-0 left-0 h-full w-2/3 bg-[#041915] text-white z-40 transform transition-transform duration-300 ease-in-out
+          ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`}
+        >
+          <ul className="flex flex-col mt-20 gap-6 pl-6 text-[#BF8C73]">
+            <a href="#home" className="font-bold hover:text-white" onClick={toggleMenu}>Home</a>
+            <a href="#about" className="font-bold hover:text-white" onClick={toggleMenu}>About Me</a>
+            <a href="#services" className="font-bold hover:text-white" onClick={toggleMenu}>Services</a>
+            <a href="#projects" className="font-bold hover:text-white" onClick={toggleMenu}>Projects</a>
+            <a href="#contact" className="font-bold hover:text-white" onClick={toggleMenu}>Contact</a>
+          </ul>
+        </div>
+
       </div>
 
       

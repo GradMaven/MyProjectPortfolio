@@ -8,18 +8,20 @@ function About() {
   };
 
   return (
-    <div className="bg-[#BF8C73] flex flex-col md:flex-row items-center justify-center gap-8 py-10 px-4 md:px-10">
+    <div className="bg-[#BF8C73] grid grid-cols-1 md:flex-row items-center justify-center gap-8 py-10 px-4 md:px-10">
+     
+     <div className='flex flex-row'>
       {/* Profile Image */}
       <div className="w-full max-w-xs md:max-w-sm flex justify-center">
         <img
           src="/images/profilepic.jpeg"
           alt="profile"
-          className="rounded-full object-cover w-[250px] h-[250px] sm:w-[300px] sm:h-[300px]"
+          className="rounded-full object-cover w-[250px] h-[250px]"
         />
       </div>
 
       {/* Text Content */}
-      <div className="w-full md:max-w-2xl text-center md:text-left">
+      <div className="w-full mx-6 md:max-w-2xl text-center md:text-left">
         <h2 id="about" className="text-[#1E493D] text-3xl font-bold mb-4">About Me</h2>
         <h3 className="text-[#1E493D] text-2xl font-bold">Frontend Engineer</h3>
         <p className="text-white font-semibold mb-6 mt-4 text-justify text-sm sm:text-base">
@@ -29,7 +31,12 @@ function About() {
           and exceptional user experiences. Excellent problem-solving and communication skills.
         </p>
 
-        <button
+     </div>
+     </div>
+      
+    <div className='flex flex-col items-center justify-center'>
+
+      <button
           onClick={handleToggle}
           className="bg-[#041915] text-white px-6 py-2 rounded-lg font-semibold hover:ring-2 hover:ring-white transition"
         >
@@ -38,7 +45,7 @@ function About() {
 
         {showMore && (
           <div>
-          <div className="mt-6 text-left">
+          <div className="mt-4 text-left">
             <h3 className="text-[#1E493D] text-2xl font-bold mt-2">Experience</h3>
 
             {/* Job 1 */}
@@ -84,12 +91,12 @@ function About() {
             
           </div>
           </div>
-          
-
         )}
-
+      
+    </div>
         
-      </div>
+
+    
       
     </div>
   );
