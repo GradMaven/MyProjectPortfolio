@@ -64,13 +64,14 @@ function Contact() {
 
             <button
               type="submit"
-              className="bg-[#BF8C73] text-white px-6 py-3 mt-2 rounded-md font-semibold hover:ring-2 hover:ring-white transition duration-300 w-full sm:w-auto self-center"
+              className="bg-[#BF8C73] text-white px-6 py-3 mt-2 rounded-md font-semibold hover:ring-2 hover:ring-[#12E93D] transition duration-300 w-full sm:w-auto self-center"
             >
               Send
             </button>
           </form>
         </div>
       </div>
+       <hr className='w-full h-1 bg-[#12E93d] border-0 rounded-sm mt-4'></hr>
     </div>
   );
 }

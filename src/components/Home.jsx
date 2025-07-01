@@ -97,17 +97,17 @@ function Home() {
           {/* Social Icons and CV Button */}
           <div className="flex flex-wrap items-center gap-4 mt-6">
             <a href="https://x.com/leonard_ondigo">
-              <img src="/icons/Twitter.png" alt="Twitter" className="w-8 h-8 hover:ring-2 hover:ring-white" />
+              <img src="/icons/Twitter.png" alt="Twitter" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
             </a>
             <a href="https://www.facebook.com/leonard.ondigo.9/">
-              <img src="/icons/Facebook.png" alt="Facebook" className="w-8 h-8 hover:ring-2 hover:ring-white" />
+              <img src="/icons/Facebook.png" alt="Facebook" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
             </a>
-            <img src="/icons/TikTok.png" alt="TikTok" className="w-8 h-8 hover:ring-2 hover:ring-white" />
+            <img src="/icons/TikTok.png" alt="TikTok" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
             <a href="https://www.linkedin.com/in/leonard-ondigo-software-developer-biomed-eng">
-              <img src="/icons/LinkedIn.png" alt="LinkedIn" className="w-8 h-8 hover:ring-2 hover:ring-white" />
+              <img src="/icons/LinkedIn.png" alt="LinkedIn" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
             </a>
             <a href="https://docs.google.com/document/d/1_eGeAiveNQt6QDt_Lv9wJcni-v0VeS2UcCZ3OqlawZc/edit?usp=sharing">
-              <button className="bg-[#BF8C73] text-[#1E493D] px-4 py-2 rounded-lg font-semibold hover:ring-2 hover:ring-white transition">
+              <button className="bg-[#BF8C73] text-[#1E493D] px-4 py-2 rounded-lg font-semibold hover:ring-2 hover:ring-[#12E93D] transition">
                 Download CV
               </button>
             </a>
@@ -123,7 +123,9 @@ function Home() {
           />
         </div>
       </div>
+      <hr className='w-full h-1 bg-[#12E93d] border-0 rounded-sm'></hr>
     </div>
+    
   );
 }
 

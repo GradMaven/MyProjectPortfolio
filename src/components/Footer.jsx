@@ -37,10 +37,10 @@ function Footer() {
 
         {/* Social Icons */}
         <div className="flex justify-center md:justify-end gap-4">
-          <img src="/icons/Facebook.png" alt="Facebook" className="w-8 h-8 hover:ring-2 hover:ring-white" />
-          <img src="/icons/LinkedIn.png" alt="LinkedIn" className="w-8 h-8 hover:ring-2 hover:ring-white" />
-          <img src="/icons/TikTok.png" alt="Tiktok" className="w-7 h-7 hover:ring-2 hover:ring-white" />
-          <img src="/icons/Twitter.png" alt="Twitter" className="w-8 h-8 hover:ring-2 hover:ring-white" />
+          <img src="/icons/Facebook.png" alt="Facebook" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
+          <img src="/icons/LinkedIn.png" alt="LinkedIn" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
+          <img src="/icons/TikTok.png" alt="Tiktok" className="w-7 h-7 hover:ring-2 hover:ring-[#12E93D]" />
+          <img src="/icons/Twitter.png" alt="Twitter" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
         </div>
       </div>
 

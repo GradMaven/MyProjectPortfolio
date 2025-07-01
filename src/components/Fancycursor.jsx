@@ -38,7 +38,7 @@ function FancyCursor() {
         y: position.y - 12,
         scale: isHovering ? 2 : 1,
         opacity: isHovering ? 0 : 2,
-        backgroundColor: isHovering ? '#BF8C73' : '#1E493D',
+        backgroundColor: isHovering ? '#BF8C73' : '#12E93D',
       }}
     
       transition={{

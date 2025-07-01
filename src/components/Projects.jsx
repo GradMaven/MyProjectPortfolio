@@ -24,7 +24,7 @@ function Projects() {
             className='rounded-md w-full h-64 object-cover p-2 transition-transform 
             duration-300 ease-in-out transform hover:scale-105 hover:brightness-110' />
         </div>
-        
+         <hr className='w-full h-1 bg-[#12E93d] border-0 rounded-sm'></hr>
         </div>
   )
 }
