@@ -47,7 +47,33 @@ function About() {
           <div className="w-full max-w-3xl mx-auto mt-6 bg-[#1E493D]/10 rounded-xl p-6 shadow-md space-y-6">
             <h3 className="text-[#1E493D] text-2xl font-bold text-center mt-2">Experience</h3>
 
-            {/* Job 1 */}
+
+             {/* Job 1 */}
+            <h4 className="text-[#1D493D] text-xl font-semibold">CEO and Founder</h4>
+            <h5 className="text-[#041915] font-medium">
+              Onbora<span className="text-[#12E93D] font-bold">Kenya</span>
+            </h5>
+            <h5 className="text-[#041915] text-sm italic indent-4">August 2025 – Present</h5>
+            <p className="text-white font-medium mt-2 text-sm sm:text-base text-justify">
+              Onbora is a startup that provides a simple, all-in-one platform to help solopreneurs and small 
+              teams in Africa onboard clients, manage tasks, and collaborate efficiently — without the 
+              complexity or cost of enterprise tools.
+            </p>
+
+            {/* Job 2 */}
+            <h4 className="text-[#1D493D] text-xl font-semibold">Co-Founder and Software Developer</h4>
+            <h5 className="text-[#041915] font-medium">
+              Creal Technologies <span className="text-[#12E93D] font-bold">Kenya</span>
+            </h5>
+            <h5 className="text-[#041915] text-sm italic indent-4">September 2025 – Present</h5>
+            <p className="text-white font-medium mt-2 text-sm sm:text-base text-justify">
+              We offer a range of services including web development, mobile app development,
+              e-commerce solutions, digital marketing, and IT consulting. Our team of experienced 
+              developers and designers work closely with clients to understand their unique needs 
+              and deliver customized solutions that drive business growth.
+            </p>
+
+            {/* Job 4 */}
             <h4 className="text-[#1D493D] text-xl font-semibold">Fullstack Developer</h4>
             <h5 className="text-[#041915] font-medium">
               Business Web Solutions <span className="text-[#12E93D] font-bold">India</span>
@@ -58,7 +84,7 @@ function About() {
               for businesses across the world.
             </p>
 
-            {/* Job 2 */}
+            {/* Job 5 */}
             <h4 className="text-[#1D493D] text-xl font-semibold">Frontend Developer</h4>
             <h5 className="text-[#041915] font-medium">Freelance: Upwork, Fiverr, Freelancer  
               <span className="text-[#12E93D] font-bold"> Remote</span></h5>

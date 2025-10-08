@@ -47,7 +47,7 @@ function Footer() {
       {/* Bottom Text */}
       <div className="mt-6 text-center text-xs sm:text-sm text-white">
         <p className='text-sm font-medium'>Crafted by leondigo</p>
-        <p className='text-sm font-medium'> © Copyright 2025 ilaxstudio. All rights reserved.</p>
+        <p className='text-sm font-medium'> © Copyright 2025 crealsd. All rights reserved.</p>
       </div>
     </footer>
   );
