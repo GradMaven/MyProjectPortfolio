@@ -21,7 +21,7 @@ function Contact() {
   };
 
   return (
-    <div className="bg-[#041915] py-10 px-4">
+    <div className="py-10 px-4">
       <div className="flex flex-col items-center">
         <h3 id="contact" className="text-white text-3xl font-bold mb-6 text-center">
           Contact Me
@@ -57,14 +57,17 @@ function Contact() {
             <textarea
               name="message"
               placeholder="Write your message"
-              className="w-full h-40 p-4 text-sm rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#BF8C73] resize-none"
+              className="w-full h-40 p-4 text-sm rounded-md border border-gray-300 
+              focus:outline-none focus:ring-2 focus:ring-[#BF8C73] resize-none"
               rows={6}
               required
             ></textarea>
 
             <button
               type="submit"
-              className="bg-[#BF8C73] text-white px-6 py-3 mt-2 rounded-md font-semibold hover:ring-2 hover:ring-[#12E93D] transition duration-300 w-full sm:w-auto self-center"
+              className="bg-[#BF8C73] text-white px-6 py-3 mt-2 rounded-md 
+              font-semibold hover:ring-2 hover:ring-[#12E93D] transition duration-300 w-full 
+              sm:w-auto self-center"
             >
               Send
             </button>

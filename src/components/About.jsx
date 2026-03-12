@@ -8,7 +8,8 @@ function About() {
   };
 
   return (
-    <div className="bg-[#BF8C73] grid grid-cols-1 items-center justify-center gap-6 py-4 px-4 md:px-4">
+    <div className="max-w-6xl mx-auto mt-6 bg-[#1E493D]/10 rounded-xl p-6 shadow-md space-y-6
+     grid grid-cols-1 items-center justify-center gap-6 py-4 px-4 md:px-4">
      
      <div className='flex flex-col lg:flex-row p-4 items-center'>
       {/* Profile Image */}

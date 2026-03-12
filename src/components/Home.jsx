@@ -9,13 +9,12 @@ function Home() {
   
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
-  
-
   return (
-    <div className="w-full bg-[#041915]">
+    <div className="w-full min-h-screen max-w-6xl mx-auto mt-6  bg-[#1E493D]/10 rounded-xl p-6 shadow-md space-y-6 relative">
       
-      <div className="container mx-auto px-4 flex flex-wrap justify-between items-start md:items-center">
-        <h3 className="text-[#BF8C73] font-bold text-xl mt-4">Portfolio</h3>
+      <div className="container fixed top-4 max-w-5xl w-full px-3 py-4 flex flex-wrap justify-between items-start
+       md:items-center rounded-full backdrop-blur-3xl border-white/25 border-2 shadow-lg">
+        <h3 className="text-[#BF8C73] font-bold text-xl mt-4">Leonard_</h3>
 
         <button onClick = {toggleMenu} id="menu-btn" class="md:hidden text-white focus:outline-none">
        <img 
@@ -40,7 +39,7 @@ function Home() {
 
         {/* Mobile Slide Menu */}
         <div
-          className={`fixed top-0 left-0 h-full w-2/3 bg-[#041915] text-white z-40 transform transition-transform duration-300 ease-in-out
+          className={`fixed top-0 left-0 h-full w-2/3 text-white z-40 transform transition-transform duration-300 ease-in-out
           ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`}
         >
           <ul className="flex flex-col mt-20 gap-6 pl-6 text-[#BF8C73]">
