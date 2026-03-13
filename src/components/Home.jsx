@@ -1,130 +1,126 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-
-
+import AnimatedBackground from './AnimatedBackground';
 
 function Home() {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  const toggleMenu = () => setIsMenuOpen(prev => !prev);
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <div className="w-full min-h-screen max-w-6xl mx-auto mt-6  bg-[#1E493D]/10 rounded-xl p-6 shadow-md space-y-6 relative">
+    // 1. using 'relative' here so the z-index of children works correctly
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-transparent">
       
-      <div className="container fixed top-4 max-w-5xl w-full px-3 py-4 flex flex-wrap justify-between items-start
-       md:items-center rounded-full backdrop-blur-3xl border-white/25 border-2 shadow-lg">
-        <h3 className="text-[#BF8C73] font-bold text-xl mt-4">Leonard_</h3>
+      {/* 2. Background stays fixed behind everything */}
+   
+       
+      {/* 3. Main Content Wrapper */}
+      <div className="relative z-10 mx-auto max-w-6xl p-6 space-y-12">
+        
+        {/* Navigation */}
+        <div className="fixed z-50 top-4 mx-auto flex w-full max-w-5xl items-center justify-between rounded-full border-2 border-white/25 bg-white/5 px-6 py-3 backdrop-blur-3xl shadow-lg">
+          <h3 className="text-[#BF8C73] font-bold text-xl">Leonard<span className="blink">_</span></h3>
 
-        <button onClick = {toggleMenu} id="menu-btn" class="md:hidden text-white focus:outline-none">
-       <img 
-        src={isMenuOpen ? "/icons/open-menu.png" : "/icons/close-menu.png"}
+          {/* Hamburger Toggle */}
+          <button onClick={toggleMenu} className="md:hidden text-white focus:outline-none">
+            <img 
+              src={isMenuOpen ? "/icons/close-menu.png" : "/icons/open-menu.png"} 
+              alt="menu toggle" 
+              className="w-8 h-8 invert" // Invert if icons are black but bg is dark
+            />
+          </button>
 
-       alt="harmburger" className="w-8 h-8" />
-      </button>
-
-      
-
-         {/* Desktop Menu */}
-        <nav className="hidden md:flex md:items-center mt-4">
-          <ul className="text-[#BF8C73] flex flex-col md:flex-row mt-4 md:mt-0 gap-2 md:gap-6">
-            <a href="#home" className="text-white hover:text-[#BF8C73] font-bold">Home</a>
-            <a href="#about" className="text-white hover:text-[#BF8C73] font-bold">About Me</a>
-            <a href="#services" className="text-white hover:text-[#BF8C73] font-bold">Services</a>
-            <a href="#projects" className="text-white hover:text-[#BF8C73] font-bold">Projects</a>
-            <a href="#contact" className="text-white hover:text-[#BF8C73] font-bold">Contact</a>
-          </ul>
-        </nav>
-
-
-        {/* Mobile Slide Menu */}
-        <div
-          className={`fixed top-0 left-0 h-full w-2/3 text-white z-40 transform transition-transform duration-300 ease-in-out
-          ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`}
-        >
-          <ul className="flex flex-col mt-20 gap-6 pl-6 text-[#BF8C73]">
-            <a href="#home" className="font-bold hover:text-white" onClick={toggleMenu}>Home</a>
-            <a href="#about" className="font-bold hover:text-white" onClick={toggleMenu}>About Me</a>
-            <a href="#services" className="font-bold hover:text-white" onClick={toggleMenu}>Services</a>
-            <a href="#projects" className="font-bold hover:text-white" onClick={toggleMenu}>Projects</a>
-            <a href="#contact" className="font-bold hover:text-white" onClick={toggleMenu}>Contact</a>
-          </ul>
+          {/* Desktop Menu */}
+          <nav className="hidden md:block">
+            <ul className="flex gap-8">
+              {['Home', 'About Me', 'Services', 'Projects', 'Contact'].map((item) => (
+                <li key={item}>
+                  <a href={`#${item.toLowerCase().replace(' ', '')}`} className="text-white hover:text-[#BF8C73] font-bold transition-colors">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
-      </div>
+        {/* Mobile Slide Menu Overlay */}
+        <div className={`fixed inset-0 z-[60] bg-[#041915]/60 backdrop-blur-sm transition-opacity ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} md:hidden`} onClick={toggleMenu} />
+        <div className={`fixed top-0 left-0 z-[70] h-full w-2/3 bg-[#041915] p-8 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`}>
+           <ul className="flex flex-col gap-8 text-[#BF8C73]">
+              {['Home', 'About Me', 'Services', 'Projects', 'Contact'].map((item) => (
+                <a key={item} href={`#${item.toLowerCase().replace(' ', '')}`} className="text-2xl font-bold hover:text-white" onClick={toggleMenu}>{item}</a>
+              ))}
+           </ul>
+        </div>
 
-      
-      <div className="flex flex-col-reverse md:flex-row items-center px-4 md:px-8 py-10">
-      
-        <div className="text-left w-full md:w-1/2 mb-10 md:mb-0">
-          <h3 className="text-[#BF8C73] hover:text-[#1E493D] text-3xl sm:text-4xl md:text-5xl mb-6">
-            Hello It's Me
-          </h3>
-          <h2 className="text-[#BF8C73] text-4xl sm:text-4xl md:text-5xl font-bold mb-6 mt-4">
-            Leonard Ondigo
-          </h2>
+        {/* Hero Section */}
+        <div className="flex flex-col-reverse items-center rounded-3xl border-2
+         border-white/10 px-8 py-16 backdrop-blur-2xl shadow-2xl md:flex-row md:px-12 mt-40">
+          
+          <div className="w-full text-left md:w-1/2">
+            <h3 className="text-[#BF8C73] text-3xl sm:text-4xl md:text-5xl mb-4">
+              Hello It's Me
+            </h3>
+            <h2 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+              Leonard Ondigo
+            </h2>
 
-          <TypeAnimation
-            sequence={[
-              'I am a Software Developer',
-              1000,
-              '',
-              500,
-              'and a Project Manager',
-              500,
-              'I build scalable web solutions',
-              1000,
-            ]}
-            wrapper="h4"
-            cursor
-            repeat={Infinity}
-            style={{ fontSize: '1.5rem', color: '#BF8C73', fontWeight: 'bold' }}
-          />
+            <div className="h-16"> {/* Fixed height prevents layout shift during typing */}
+                <TypeAnimation
+                sequence={[
+                    'I am a Software Developer', 1000,
+                    'I am a Project Manager', 1000,
+                    'I build scalable web solutions', 1000,
+                ]}
+                wrapper="h4"
+                cursor
+                repeat={Infinity}
+                style={{ fontSize: '1.5rem', color: '#BF8C73', fontWeight: 'bold' }}
+                />
+            </div>
 
-          <p className="text-white text-justify font-semibold mt-6 sm:text-base text-sm">
-            As a software developer and project manager, I design, develop,
-            and implement software solutions while ensuring projects are
-            completed on time and within scope. I coordinate with
-            cross-functional teams, manage resources, and monitor progress
-            to meet project objectives. My role involves solving technical
-            challenges, maintaining code quality, and aligning deliverables
-            with stakeholder expectations. Additionally, I bridge the gap
-            between development and management, ensuring seamless
-            collaboration and efficient execution.
-          </p>
+            <p className="mt-6 text-sm font-medium leading-relaxed text-slate-300 sm:text-base md:text-lg">
+              As a software developer and project manager, I design, develop,
+              and implement software solutions while ensuring projects are
+              completed on time and within scope. I bridge the gap
+              between development and management, ensuring seamless
+              collaboration and efficient execution.
+            </p>
 
-          {/* Social Icons and CV Button */}
-          <div className="flex flex-wrap items-center gap-4 mt-6">
-            <a href="https://x.com/leonard_ondigo">
-              <img src="/icons/Twitter.png" alt="Twitter" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
-            </a>
-            <a href="https://www.facebook.com/leonard.ondigo.9/">
-              <img src="/icons/Facebook.png" alt="Facebook" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
-            </a>
-            <img src="/icons/TikTok.png" alt="TikTok" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
-            <a href="https://www.linkedin.com/in/leonard-ondigo-software-developer-biomed-eng">
-              <img src="/icons/LinkedIn.png" alt="LinkedIn" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
-            </a>
-            <a href="https://docs.google.com/document/d/1_eGeAiveNQt6QDt_Lv9wJcni-v0VeS2UcCZ3OqlawZc/edit?usp=sharing">
-              <button className="bg-[#BF8C73] text-[#1E493D] px-4 py-2 rounded-lg font-semibold hover:ring-2 hover:ring-[#12E93D] transition">
-                Download CV
-              </button>
-            </a>
+            {/* Social Icons and CV Button */}
+            <div className="mt-10 flex flex-wrap items-center gap-6">
+              <div className="flex gap-4">
+                {['Twitter', 'Facebook', 'TikTok', 'LinkedIn'].map((platform) => (
+                    <a key={platform} href="#" className="transition-transform hover:scale-110">
+                        <img src={`/icons/${platform}.png`} alt={platform} className="w-8 h-8 hover:ring-2 hover:ring-[#BF8C73] rounded-md" />
+                    </a>
+                ))}
+              </div>
+              <a href="https://docs.google.com/document/d/1RKCEWFgF3shnzW-x35pd4Qisgw7dvsBOAWKXVMHZ_ek/edit?usp=sharing">
+                <button className="rounded-lg bg-[#BF8C73] px-6 py-3 font-bold text-slate-900 transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(191,140,115,0.4)]">
+                  Download CV
+                </button>
+              </a>
+            </div>
+          </div>
+
+          {/* Profile Image */}
+          <div className="mb-12 flex w-full justify-center md:mb-0 md:w-1/2">
+            <div className="relative">
+                {/* Decorative ring around image */}
+                <div className="absolute -inset-4 rounded-full border border-[#BF8C73]/30 animate-pulse" />
+                <img
+                src="/images/profilepic.jpeg"
+                alt="profile"
+                className="relative h-[250px] w-[250px] rounded-full border-4 border-[#BF8C73]/20 object-cover shadow-2xl sm:h-[300px] sm:w-[300px] md:h-[400px] md:w-[400px]"
+                />
+            </div>
           </div>
         </div>
 
-        {/* Profile Image */}
-        <div className="hidden md:flex w-full md:w-1/2 justify-center">
-          <img
-            src="/images/profilepic.jpeg"
-            alt="profile"
-            className="rounded-full object-cover w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] mb-4 md:mb-0"
-          />
-        </div>
+        <hr className="h-1 w-full rounded-sm border-0 bg-[#BF8C73]/50" />
       </div>
-      <hr className='w-full h-1 bg-[#12E93d] border-0 rounded-sm'></hr>
     </div>
-    
   );
 }
 

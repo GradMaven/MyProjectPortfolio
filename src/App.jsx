@@ -15,10 +15,10 @@ function App() {
 
   return (
     <> 
-      <AnimatedBackground /> 
-      
+
+       <AnimatedBackground /> 
       <div className="relative z-10">
-      
+  
         <Home />
         <About />
         <Services />

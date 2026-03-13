@@ -22,10 +22,19 @@ export default function AnimatedBackground() {
   return (
 
     
-    <Canvas camera={{ position: [0, 0, 12], fov: 60 }} 
-            className="fixed top-0 left-0 w-full h-full -z-50 bg-[#041915] pointer-events-none">
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[5, 5, 5]} />
+    <Canvas camera={{ position: [2, 4, 8], fov: 70 }}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        zIndex: -100,
+        pointerEvents: "none",
+        background: "#041915"
+      }}>
+      <ambientLight intensity={0.8} />
+      <directionalLight position={[5, 5, 10]} />
       <Scene />
     </Canvas>
   );

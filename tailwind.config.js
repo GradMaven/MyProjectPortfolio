@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'ui-sans-serif', 'system-ui'],
+        header: ['Ranade', 'ui-sans-serif', 'system-ui'],
+      },
+    },
   },
   plugins: [],
 }

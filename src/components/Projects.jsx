@@ -2,9 +2,10 @@ import React from 'react'
 
 function Projects() {
   return (
-    <div className=' flex flex-col items-center max-w-6xl mx-auto mt-6 bg-[#1E493D]/10 rounded-xl p-6 shadow-md space-y-6'>
+    <div className=' flex flex-col items-center max-w-6xl mx-auto mt-6 bg-[#1E493D]/10 rounded-3xl border-2
+         border-white/10 p-6 shadow-md space-y-6'>
 
-        <h2 id="projects" className='text-[#1E493D] text-2xl font-bold mt-6'>My Projects</h2>
+        <h2 id="projects" className='text-white text-2xl font-bold mt-6'>My Projects</h2>
         
         <div className='grid grid-cols-2 gap-4 mt-4 mb-4 cursor-pointer'>
             <a href="https://travel-planner-app-pied.vercel.app/">

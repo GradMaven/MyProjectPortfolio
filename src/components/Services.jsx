@@ -2,7 +2,8 @@ import React from 'react';
 
 function Services() {
   return (
-    <div className=" flex flex-col items-center px-4 py-10 max-w-6xl mx-auto mt-6 bg-[#1E493D]/10 rounded-xl p-6 shadow-md space-y-6">
+    <div className=" flex flex-col items-center px-4 py-10 max-w-6xl mx-auto mt-6 bg-[#1E493D]/10 rounded-3xl border-2
+         border-white/10 p-6 shadow-md space-y-6">
       <h2 id="services" className="text-[#BF8C73] text-3xl font-bold mb-8 text-center">My Services</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">

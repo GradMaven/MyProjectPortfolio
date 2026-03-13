@@ -19,7 +19,7 @@ export const InteractiveBlob = () => {
         y: mousePos.y - 150,
       }}
       transition={{ type: "spring", damping: 30, stiffness: 50 }}
-      className="pointer-events-none fixed h-[300px] w-[300px] rounded-full bg-[#BF8C73]/10 blur-[80px]"
+      className="pointer-events-none -z-10 fixed h-[300px] w-[300px] rounded-full bg-[#BF8C73]/10 blur-[80px]"
     />
   );
 };
