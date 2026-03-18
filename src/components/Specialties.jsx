@@ -1,13 +1,27 @@
 import React from 'react';
 
-function Services() {
+function Specialties() {
   return (
     <div className=" flex flex-col items-center px-4 py-10 max-w-6xl mx-auto mt-6 bg-[#1E493D]/10 rounded-3xl border-2
          border-white/10 p-6 shadow-md space-y-6">
-      <h2 id="services" className="text-[#BF8C73] text-3xl font-bold mb-8 text-center">My Services</h2>
+      <h2 id="specialties" className="text-[#BF8C73] text-3xl font-bold mb-8 text-center">My Specialties</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
-        {/* UI/UX Design */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full max-w-7xl">
+        {/* Technical Operations and Automations */}
+        <div className="bg-[#BF8C73] text-center shadow-lg rounded-lg p-6 hover:ring-2 hover:ring-[#12E93D] transition">
+          <h3 className="text-[#1E493D] text-xl font-bold mb-2">Technical Operations and Automations</h3>
+          <p className="text-white text-justify text-sm sm:text-base">
+            Technical Operations Specialist with a background in software development and startup building. 
+            Experienced in automating workflows and improving operational efficiency, implementing AI-powered systems, optimizing CRMs, and
+            building lean operational infrastructure for early-stage teams. Skilled in leveraging technology to drive growth, streamline processes
+            and translating technical solutions into measurable business efficiency.
+          </p>
+          <button className="bg-[#041915] text-white px-6 py-2 mt-4 rounded-lg font-semibold hover:ring-2 hover:ring-[#12E93D] transition">
+            Read More
+          </button>
+        </div>
+
+         {/* UI/UX Design */}
         <div className="bg-[#BF8C73] text-center shadow-lg rounded-lg p-6 hover:ring-2 hover:ring-[#12E93D] transition">
           <h3 className="text-[#1E493D] text-xl font-bold mb-2">UI/UX Design</h3>
           <p className="text-white text-justify text-sm sm:text-base">
@@ -54,4 +68,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Specialties;

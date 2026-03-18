@@ -17,7 +17,8 @@ function Home() {
       <div className="relative z-10 mx-auto max-w-6xl p-6 space-y-12">
         
         {/* Navigation */}
-        <div className="fixed z-50 top-4 mx-auto flex w-full max-w-5xl items-center justify-between rounded-full border-2 border-white/25 bg-white/5 px-6 py-3 backdrop-blur-3xl shadow-lg">
+        <div className="fixed z-50 top-4 mx-auto flex w-full max-w-6xl items-center justify-between 
+        rounded-full border-2 border-white/25 bg-transparent px-6 py-3 backdrop-blur-3xl shadow-lg">
           <h3 className="text-[#BF8C73] font-bold text-xl">Leonard<span className="blink">_</span></h3>
 
           {/* Hamburger Toggle */}
@@ -47,7 +48,7 @@ function Home() {
         <div className={`fixed inset-0 z-[60] bg-[#041915]/60 backdrop-blur-sm transition-opacity ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} md:hidden`} onClick={toggleMenu} />
         <div className={`fixed top-0 left-0 z-[70] h-full w-2/3 bg-[#041915] p-8 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`}>
            <ul className="flex flex-col gap-8 text-[#BF8C73]">
-              {['Home', 'About Me', 'Services', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'About Me', 'Specialties', 'Projects', 'Contact'].map((item) => (
                 <a key={item} href={`#${item.toLowerCase().replace(' ', '')}`} className="text-2xl font-bold hover:text-white" onClick={toggleMenu}>{item}</a>
               ))}
            </ul>

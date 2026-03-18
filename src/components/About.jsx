@@ -27,9 +27,13 @@ function About() {
       {/* Text Content */}
       <div className="w-full mx-6 md:max-w-2xl text-center md:text-left">
         <h2 id="about" className="text-white text-3xl font-bold mb-4 mt-4">About Me</h2>
-        <h3 className="text-[#BF8C73] text-2xl font-bold">Frontend Engineer</h3>
+        <h3 className="text-[#BF8C73] text-2xl font-bold">Technical Support Specialist and Software Engineer</h3>
         <p className="text-white font-semibold mb-6 mt-4 text-justify text-sm sm:text-base">
-          Highly skilled Front End Developer with three years of experience in creating visually appealing 
+          Technical Operation Specialist with a strong background in software development and startup building.
+          Experienced in automating workflows and improving operational efficiency, implementing AI-powered systems, optimizing CRMs, and
+          building lean operational infrastructure for early-stage teams. Skilled in leveraging technology to drive growth, streamline processes
+          and translating technical solutions into measurable business efficiency. 
+          Highly skilled Front End Developer with Five years of experience in creating visually appealing 
           and user-friendly websites. Proficient in HTML, CSS, and JavaScript, with a strong understanding 
           of modern web development technologies and frameworks. Committed to delivering high-quality code 
           and exceptional user experiences. Excellent problem-solving and communication skills.
@@ -67,14 +71,20 @@ function About() {
             {/* Job 2 */}
             <h4 className="text-white text-xl font-semibold">Co-Founder and CTO</h4>
             <h5 className="text-[#BF8C73] font-medium">
-              Creal Technologies <span className="text-white font-bold">Kenya</span>
+              Uwazi <span className="text-white font-bold">Kenya</span>
             </h5>
-            <h5 className="text-[#BF8C73] text-sm italic indent-4">September 2025 – Present</h5>
+            <h5 className="text-[#BF8C73] text-sm italic indent-4">January 2026 – Present</h5>
             <p className="text-white font-medium mt-2 text-sm sm:text-base text-justify">
-              We offer a range of services including web development, mobile app development,
-              e-commerce solutions, digital marketing, and IT consulting. Our team of experienced 
-              developers and designers work closely with clients to understand their unique needs 
-              and deliver customized solutions that drive business growth.
+              Build Uwazi platform, a social enterprise that empowers citizens to safely and anonymously 
+              report corruption, increasing transparency and accountability in Kenya.
+              Implemented:
+              End-to-end encryption, No collection of personal identifiers (no email, no phone required)
+              Anonymous submission IDs instead of accounts
+              By using the following technology stack:
+              •	Frontend: React + Vite, 
+              •	Backend: Node.js + Express,
+              •	Database: MongoDB or PostgreSQL,
+              •	Encryption: libsodium or Web Crypto API
             </p>
 
             {/* Job 4 */}
