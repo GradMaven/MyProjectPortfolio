@@ -1,53 +1,41 @@
 import React from 'react';
+import { navItems } from './navItems';
+import SocialLinks from './SocialLinks';
 
 function Footer() {
   return (
-    <footer className="bg-[#BF8C73] text-[#061127] px-4 py-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+    <footer className="bg-surface/60 border-t border-white/10 text-white px-4 py-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-8">
         {/* profile */}
-        <div className="flex justify-center md:justify-start">
+        <div className="flex items-center gap-3 justify-center md:justify-start">
           <img
             src="/images/profilepic.jpeg"
-            alt="profilepic"
-            className="h-16 w-16 rounded-full object-cover"
+            alt="Leonard Ondigo"
+            className="h-12 w-12 rounded-full object-cover ring-2 ring-accent/40"
           />
+          <span className="text-accent font-bold text-lg font-header">Leonard Ondigo</span>
         </div>
 
         {/* Links */}
-        <div className="flex flex-col sm:flex-row items-center gap-6 text-sm font-bold">
-          <a
-            href="#home"
-            className="hover:text-white transition duration-300"
-          >
-            Home
-          </a>
-          <a
-            href="#projects"
-            className="hover:text-white transition duration-300"
-          >
-            Projects
-          </a>
-          <a
-            href="#services"
-            className="hover:text-white transition duration-300"
-          >
-            Services
-          </a>
-        </div>
+        <nav>
+          <ul className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm font-bold">
+            {navItems.map(({ label, id }) => (
+              <li key={id}>
+                <a href={`#${id}`} className="text-slate-300 hover:text-accent transition duration-300">
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        {/* Social Icons */}
-        <div className="flex justify-center md:justify-end gap-4">
-          <img src="/icons/Facebook.png" alt="Facebook" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
-          <img src="/icons/LinkedIn.png" alt="LinkedIn" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
-          <img src="/icons/TikTok.png" alt="Tiktok" className="w-7 h-7 hover:ring-2 hover:ring-[#12E93D]" />
-          <img src="/icons/Twitter.png" alt="Twitter" className="w-8 h-8 hover:ring-2 hover:ring-[#12E93D]" />
-        </div>
+        <SocialLinks className="justify-center md:justify-end" iconClassName="w-4 h-4" />
       </div>
 
       {/* Bottom Text */}
-      <div className="mt-6 text-center text-xs sm:text-sm text-white">
-        <p className='text-sm font-medium'>Crafted by leondigo</p>
-        <p className='text-sm font-medium'> © Copyright 2025 leondigo. All rights reserved.</p>
+      <div className="mt-8 pt-6 border-t border-white/10 text-center text-xs sm:text-sm text-slate-400 space-y-1">
+        <p className="font-medium">Crafted by Leonard Ondigo</p>
+        <p className="font-medium">© {new Date().getFullYear()} Leonard Ondigo. All rights reserved.</p>
       </div>
     </footer>
   );

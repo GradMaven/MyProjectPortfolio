@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 function FancyCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -29,7 +29,7 @@ function FancyCursor() {
   }, []);
 
   return (
-    <motion.div
+    <Motion.div
       className="pointer-events-none fixed top-0 left-0 z-[9999] hidden sm:block
       backdrop-opacity-0 
       "
@@ -37,15 +37,14 @@ function FancyCursor() {
         x: position.x - 12,
         y: position.y - 12,
         scale: isHovering ? 2 : 1,
-        opacity: isHovering ? 0 : 2,
-        backgroundColor: isHovering ? '#BF8C73' : '#12E93D',
+        opacity: isHovering ? 0.5 : 1,
+        backgroundColor: '#BF8C73',
       }}
-    
+
       transition={{
         type: 'spring',
         stiffness: 300,
         damping: 30,
-        opacity: 0,
       }}
       style={{
         width: 16,

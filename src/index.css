@@ -6,7 +6,10 @@
 body, html, #root {
   @apply box-border m-0 p-0;
   margin: 0%;
-  
+}
+
+body {
+  background-color: #041915;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,7 +26,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background-color: #BF8C73;
+  color: #041915;
+}
+
+:focus-visible {
+  outline: 2px solid #BF8C73;
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #041915;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #BF8C73;
+  border-radius: 999px;
+  border: 2px solid #041915;
+}
+html {
+  scrollbar-color: #BF8C73 #041915;
+  scrollbar-width: thin;
+}
