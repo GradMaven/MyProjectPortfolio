@@ -2,6 +2,20 @@ import React from 'react';
 
 const projects = [
   {
+    title: 'Onbora',
+    description: 'A SaaS platform for small businesses to manage their operations, including invoicing, scheduling, and customer management.',
+    image: '/images/onbora.png',
+    href: 'https://onbora.org/', 
+    tags: ['React', 'Next.js', 'SaaS'],
+  },
+  {
+    title: 'uwazi',
+    description: 'A web application for a startup that helps people easily report corruption, unethical practices and track developments in their communities.',
+    image: '/images/uwazi_card.png',
+    href: 'https://www.uwazi.space/',
+    tags: ['React', 'Next.js', 'Web App'],
+  },
+  {
     title: 'Travel Planner App',
     description: 'A full-stack app for planning trips, organizing itineraries, and tracking travel budgets.',
     image: '/images/travel-planner-design.JPG',
